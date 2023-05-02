@@ -157,13 +157,16 @@ button: {
 
 /* Header styles */
 .header {
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
     border-bottom: 1px solid #E7E9FC;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
 
 .header-nav {
@@ -237,7 +240,8 @@ button: {
     padding-bottom: 188px;
     text-align: center;
     background-color: var(--title-text-color);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/bg-img.png);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero/bg-img.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -297,19 +301,26 @@ button: {
 .about-list {
     display: flex;
     gap: 24px;
+
 }
 
 .about-item {
     width: calc((100% - 72px) / 4)
 }
 
-.about-icon {
-    border-radius: 4px;
-    width: 264px;
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 112px;
     background-color: var(--light-bg-color);
+    border-radius: 4px;
     margin-bottom: 8px;
+
 }
+
+.about-icon {}
+
 
 .about-subtitle {}
 
@@ -342,7 +353,7 @@ button: {
 .team-list {}
 
 .team-wrapper {
-    padding: 32px 16px;
+    padding: 32px 0;
     border-radius: 0 0 4px 4px;
 }
 
@@ -369,7 +380,6 @@ button: {
 
 }
 
-.social-item {}
 
 .socials-link {
     display: flex;
@@ -381,7 +391,14 @@ button: {
     background-color: var(--acent-color)
 }
 
-.socials-icon {}
+.socials-link:hover,
+.socials-link:focus {
+    background-color: var(--active-color);
+}
+
+.socials-icon {
+    fill: var(--light-bg-color);
+}
 
 .team-img {}
 
@@ -482,6 +499,8 @@ button: {
     row-gap: 48px;
 }
 
+
+
 .projects-item: {
     width: calc((100% - 48px) / 3);
 }
@@ -498,22 +517,35 @@ button: {
 }
 
 .projects-shadow {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    display: block;
+
+}
+
+.projects-shadow:hover,
+.projects-shadow:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 
 
 /* Footer styles */
 .footer {
-    display: flex;
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 156px;
-    padding-right: 692 color: var(--light-bg-color);
+    color: var(--light-bg-color);
     background-color: var(--dark-bg-color);
 }
 
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
 
+.footer-logo-container {
+    margin-right: 120px;
+}
 
 .footer-logo-text {
     font-family: "Raleway", sans-serif;
@@ -535,7 +567,7 @@ button: {
 .footer-socials-description {
     font-weight: 500;
     font-size: 16px;
-    line-height: 1, 5;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--primary-white-color);
     margin-bottom: 16px;
@@ -546,9 +578,9 @@ button: {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: var(--acent-color)
+    width: 100%;
+    height: 100%;
+    background-color: var(--acent-color);
 }
 
 .footer-socials-link:hover,
@@ -557,5 +589,11 @@ button: {
 }
 
 .footer-socials-list {
-    justify-content: left;
+    display: flex;
+    gap: 16px;
+}
+
+.footer-socials-item {
+    width: 40px;
+    height: 40px;
 }
