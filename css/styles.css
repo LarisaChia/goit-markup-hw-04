@@ -241,7 +241,7 @@ button: {
     text-align: center;
     background-color: var(--title-text-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero/bg-img.png);
+        url(../images/hero/hero-img.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -408,12 +408,13 @@ button: {
 
 /* Customers styles */
 .customers {
-    padding-top: 145px;
-    padding-bottom: 109px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .customers-title {
-    margin-bottom: 63px;
+    line-height: 1.1;
+    margin-bottom: 72px;
 }
 
 .customers-list {
@@ -428,12 +429,12 @@ button: {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--color-light-slate);
-    border-radius: 5px;
+    border-radius: 4px;
     width: 168px;
     height: 88px;
     padding: 16px 32px;
     background-color: #ffffff;
-    color: var(--icon-grey-color);
+    color: var(--color-light-slate);
 }
 
 .customers-link:hover,
