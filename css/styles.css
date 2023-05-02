@@ -9,8 +9,9 @@
     --light-bg-color: #F4F4FD;
     --acent-color: #4D5AE5;
     --active-color: #404BBF;
+    --icon-grey-color: #AFB1B8;
     /* додані через ФІГМУ */
-    --color-green: : #31d0aa;
+    --color-green: #31d0aa;
     --color-light-slate: #8e8f99;
     --color-cornflower: #e7e9fc;
     --color-dairy: #fcfcfc;
@@ -162,6 +163,7 @@ button: {
 .header-container {
     display: flex;
     align-items: center;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav {
@@ -228,10 +230,18 @@ button: {
 /* Main styles */
 /* Hero styles */
 .hero {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    background-color: var(--title-text-color)
+    background-color: var(--title-text-color);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .hero-title {
@@ -264,6 +274,7 @@ button: {
     letter-spacing: 0.04em;
     background-color: var(--acent-color);
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover,
@@ -290,6 +301,14 @@ button: {
 
 .about-item {
     width: calc((100% - 72px) / 4)
+}
+
+.about-icon {
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: var(--light-bg-color);
+    margin-bottom: 8px;
 }
 
 .about-subtitle {}
@@ -322,23 +341,94 @@ button: {
 
 .team-list {}
 
+.team-wrapper {
+    padding: 32px 16px;
+    border-radius: 0 0 4px 4px;
+}
+
 .team-item {
     text-align: center;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--primary-white-color);
 }
 
-.team-desc {
-    padding: 32px 16px;
-    border-radius: 0 0 4px 4px;
+.team-description {
+    margin-bottom: 8px;
+}
+
+
+
+/* social icons */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 
 }
+
+.social-item {}
+
+.socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--acent-color)
+}
+
+.socials-icon {}
 
 .team-img {}
 
 .team-subtitle {}
 
 .team-description {}
+
+/* Customers styles */
+.customers {
+    padding-top: 145px;
+    padding-bottom: 109px;
+}
+
+.customers-title {
+    margin-bottom: 63px;
+}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-light-slate);
+    border-radius: 5px;
+    width: 168px;
+    height: 88px;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    color: var(--icon-grey-color);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    color: var(--active-color);
+    border: 1px solid var(--active-color);
+    background-color: var(--primary-white-color)
+}
+
+.customers-icon {
+    fill: currentColor;
+}
 
 /* Content styles */
 .content {
@@ -379,6 +469,7 @@ button: {
     border: 1px solid transparent;
     color: var(--primary-white-color);
     background-color: var(--active-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Projects styles */
@@ -406,13 +497,23 @@ button: {
 
 }
 
+.projects-shadow {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+
+
 /* Footer styles */
 .footer {
+    display: flex;
     padding-top: 100px;
     padding-bottom: 100px;
-    color: var(--light-bg-color);
+    padding-left: 156px;
+    padding-right: 692 color: var(--light-bg-color);
     background-color: var(--dark-bg-color);
 }
+
+
 
 .footer-logo-text {
     font-family: "Raleway", sans-serif;
@@ -428,4 +529,33 @@ button: {
 .footer-description {
     width: 264px;
     color: var(--light-bg-color);
+}
+
+
+.footer-socials-description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1, 5;
+    letter-spacing: 0.02em;
+    color: var(--primary-white-color);
+    margin-bottom: 16px;
+}
+
+.footer-socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--acent-color)
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+    background-color: var(--color-green);
+}
+
+.footer-socials-list {
+    justify-content: left;
 }
