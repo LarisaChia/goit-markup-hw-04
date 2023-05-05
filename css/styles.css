@@ -432,7 +432,6 @@ button: {
     border-radius: 4px;
     width: 168px;
     height: 88px;
-    padding: 16px 32px;
     background-color: #ffffff;
     color: var(--color-light-slate);
 }
